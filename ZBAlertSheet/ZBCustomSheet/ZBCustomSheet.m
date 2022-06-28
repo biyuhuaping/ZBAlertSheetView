@@ -13,7 +13,7 @@
 
 @interface ZBCustomSheet()
 
-@property (copy, nonatomic) void (^selectedBLock)(NSInteger index);
+@property (copy, nonatomic) void (^selectedBlock)(NSInteger index);
 @property (weak, nonatomic) UIView *maskView;
 @property (strong, nonatomic) UIButton *btn1;
 @property (strong, nonatomic) UIButton *btn2;
@@ -24,7 +24,7 @@
 
 + (void)showSheetViewWithSex:(NSInteger)sex SelectedBlock:(void (^)(NSInteger index))selectedBlock{
     ZBCustomSheet *actionSheet = [[ZBCustomSheet alloc]initWithSex:sex SelectedBlock:selectedBlock];
-    actionSheet.selectedBLock = selectedBlock;
+    actionSheet.selectedBlock = selectedBlock;
     [actionSheet show];
 }
 
@@ -143,7 +143,7 @@
     self.btn1.selected = NO;
     self.btn2.selected = NO;
     sender.selected = YES;
-    self.selectedBLock ? self.selectedBLock(sender.tag) : nil;
+    self.selectedBlock ? self.selectedBlock(sender.tag) : nil;
 }
 
 
