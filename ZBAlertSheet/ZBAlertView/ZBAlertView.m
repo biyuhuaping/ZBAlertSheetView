@@ -27,7 +27,7 @@
 
 @interface ZBAlertView ()
 
-@property (copy, nonatomic) void (^selectedBLock)(NSInteger index);
+@property (copy, nonatomic) void (^selectedBlock)(NSInteger index);
 
 // 半透明蒙层
 @property (nonatomic, strong) UIView *darkView;
@@ -249,7 +249,7 @@
 /// @param selectedBlock 点击回调返回index
 + (void)showAlertWithTitle:(nonnull NSString *)title message:(nullable NSString *)message verticalButtonTitles:(nullable NSArray<NSString *> *)btnTitleArr selectedBlock:(void (^)(NSInteger index))selectedBlock{
     ZBAlertView *alert = [[ZBAlertView alloc]initWithTitle:title message:message buttonTitles:btnTitleArr];
-    alert.selectedBLock = selectedBlock;
+    alert.selectedBlock = selectedBlock;
     [alert show];
 }
 
@@ -288,8 +288,8 @@
     if (self.completionBlock) {
         self.completionBlock(btn.tag-BUTTON_TAG);
     }
-    if (self.selectedBLock) {
-        self.selectedBLock(btn.tag-BUTTON_TAG);
+    if (self.selectedBlock) {
+        self.selectedBlock(btn.tag-BUTTON_TAG);
     }
 }
 
