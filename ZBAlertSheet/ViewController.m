@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ZBCustomSheet.h"
 #import "ZBAlertView.h"
+#import "ZBShareSheetView.h"
 
 @interface ViewController ()
 
@@ -42,6 +43,12 @@
             title = @"女";
         }
         [sender setTitle:title forState:UIControlStateNormal];
+    }];
+}
+
+- (IBAction)sheetShareAction:(UIButton *)sender {
+    [ZBShareSheetView showSheetViewComplete:^(int clickType) {
+        NSLog(@"点击了：%d",clickType);
     }];
 }
 

@@ -15,6 +15,7 @@
 		3922E2C522C0AFE30057ACA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3922E2C422C0AFE30057ACA3 /* main.m */; };
 		3922E2CD22C0B0130057ACA3 /* ZBCustomSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3922E2CC22C0B0130057ACA3 /* ZBCustomSheet.m */; };
 		39911706286328D1001FF6C3 /* ZBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39911705286328D1001FF6C3 /* ZBAlertView.m */; };
+		39E9FC6E2891704D0019CFC6 /* ZBShareSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E9FC6C2891704D0019CFC6 /* ZBShareSheetView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3922E2CC22C0B0130057ACA3 /* ZBCustomSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCustomSheet.m; sourceTree = "<group>"; };
 		39911704286328D1001FF6C3 /* ZBAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBAlertView.h; sourceTree = "<group>"; };
 		39911705286328D1001FF6C3 /* ZBAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBAlertView.m; sourceTree = "<group>"; };
+		39E9FC6C2891704D0019CFC6 /* ZBShareSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBShareSheetView.m; sourceTree = "<group>"; };
+		39E9FC6D2891704D0019CFC6 /* ZBShareSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBShareSheetView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			children = (
 				39911703286328B3001FF6C3 /* ZBAlertView */,
 				3922E2CE22C0B0180057ACA3 /* ZBCustomSheet */,
+				39E9FC6B2891704D0019CFC6 /* ZBShareSheetView */,
 				3922E2B522C0AFE10057ACA3 /* AppDelegate.h */,
 				3922E2B622C0AFE10057ACA3 /* AppDelegate.m */,
 				3922E2B822C0AFE10057ACA3 /* ViewController.h */,
@@ -95,6 +99,15 @@
 				39911705286328D1001FF6C3 /* ZBAlertView.m */,
 			);
 			path = ZBAlertView;
+			sourceTree = "<group>";
+		};
+		39E9FC6B2891704D0019CFC6 /* ZBShareSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				39E9FC6C2891704D0019CFC6 /* ZBShareSheetView.m */,
+				39E9FC6D2891704D0019CFC6 /* ZBShareSheetView.h */,
+			);
+			path = ZBShareSheetView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +182,7 @@
 			files = (
 				39911706286328D1001FF6C3 /* ZBAlertView.m in Sources */,
 				3922E2BA22C0AFE10057ACA3 /* ViewController.m in Sources */,
+				39E9FC6E2891704D0019CFC6 /* ZBShareSheetView.m in Sources */,
 				3922E2C522C0AFE30057ACA3 /* main.m in Sources */,
 				3922E2CD22C0B0130057ACA3 /* ZBCustomSheet.m in Sources */,
 				3922E2B722C0AFE10057ACA3 /* AppDelegate.m in Sources */,

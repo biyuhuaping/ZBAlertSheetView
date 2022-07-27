@@ -38,15 +38,29 @@
                                     <action selector="sheetBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8f-XJ-jB9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUH-PZ-NC4">
+                                <rect key="frame" x="0.0" y="338" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="p9J-yU-Ww0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="分享弹框"/>
+                                <connections>
+                                    <action selector="sheetShareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v9-mK-dz3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tRM-cp-GGM" secondAttribute="trailing" id="2QQ-Oa-Xni"/>
                             <constraint firstAttribute="trailing" secondItem="Kn0-0h-qXs" secondAttribute="trailing" id="Ebn-jM-TqS"/>
+                            <constraint firstItem="GUH-PZ-NC4" firstAttribute="top" secondItem="Kn0-0h-qXs" secondAttribute="bottom" constant="28" id="Eqc-NQ-nJI"/>
+                            <constraint firstItem="GUH-PZ-NC4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IYV-iE-H2v"/>
                             <constraint firstItem="Kn0-0h-qXs" firstAttribute="top" secondItem="tRM-cp-GGM" secondAttribute="bottom" constant="26" id="Iwh-gQ-HB0"/>
                             <constraint firstItem="tRM-cp-GGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J6n-AP-ldj"/>
                             <constraint firstItem="tRM-cp-GGM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="TF7-ib-uUu"/>
+                            <constraint firstItem="GUH-PZ-NC4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dQF-k0-6ki"/>
                             <constraint firstItem="Kn0-0h-qXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zlB-kP-qwP"/>
                         </constraints>
                     </view>
