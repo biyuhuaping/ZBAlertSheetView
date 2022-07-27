@@ -104,8 +104,8 @@
 		39E9FC6B2891704D0019CFC6 /* ZBShareSheetView */ = {
 			isa = PBXGroup;
 			children = (
-				39E9FC6C2891704D0019CFC6 /* ZBShareSheetView.m */,
 				39E9FC6D2891704D0019CFC6 /* ZBShareSheetView.h */,
+				39E9FC6C2891704D0019CFC6 /* ZBShareSheetView.m */,
 			);
 			path = ZBShareSheetView;
 			sourceTree = "<group>";

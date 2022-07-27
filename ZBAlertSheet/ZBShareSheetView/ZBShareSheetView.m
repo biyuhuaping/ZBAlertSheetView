@@ -34,7 +34,7 @@ typedef void(^SheetBlock)(int clickType);
 
 - (void)setupView{
     self.sheetView = [[UIView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, kSheetViewHeight)];
-    self.sheetView.backgroundColor = [UIColor clearColor];
+    self.sheetView.backgroundColor = UIColor.clearColor;
     [self addSubview:self.sheetView];
     
     UIButton *cancleBtn = [[UIButton alloc] init];
