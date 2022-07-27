@@ -49,7 +49,7 @@
         contentView.backgroundColor = [UIColor whiteColor];
         [self addSubview:contentView];
         //给view设置圆角
-        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:contentView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(12, 12)];
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:contentView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(12, 12)];
         CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
         maskLayer.frame = contentView.bounds;
         maskLayer.path = maskPath.CGPath;
