@@ -5,7 +5,8 @@
 
 ## 1. 导入头文件：
 ``#import "ZBAlertView.h"``<br>
-``#import "ZBCustomSheet.h"``
+``#import "ZBCustomSheet.h"``<br>
+``#import "ZBShareSheetView.h"``
 
 
 ## 2. 添加代码
