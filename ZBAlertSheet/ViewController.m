@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
 }
 
+//对话框
 - (IBAction)alertBtnAction:(UIButton *)sender {
     NSArray *titleArray = @[@"按钮0",@"按钮1",@"按钮2",@"按钮3"];
     [ZBAlertView showAlertWithTitle:@"付款完成前请不要关闭此窗口，完成付款后请根据您的实际情况点击此按钮" message:nil verticalButtonTitles:titleArray selectedBlock:^(NSInteger index) {
@@ -32,6 +33,7 @@
     }];
 }
 
+//选择性别
 - (IBAction)sheetBtnAction:(UIButton *)sender {
     [ZBCustomSheet showSheetViewWithSex:self.sex SelectedBlock:^(NSInteger index) {
         NSLog(@"------> index: %ld", index);
@@ -46,6 +48,7 @@
     }];
 }
 
+//分享
 - (IBAction)sheetShareAction:(UIButton *)sender {
     [ZBShareSheetView showSheetViewComplete:^(int clickType) {
         NSLog(@"点击了：%d",clickType);

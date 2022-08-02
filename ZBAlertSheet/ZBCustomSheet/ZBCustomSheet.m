@@ -39,29 +39,24 @@
         [[UIApplication sharedApplication].keyWindow addSubview:maskView];
         self.maskView = maskView;
         
-        //在keyWindow上底部添加一个背景的actionSheet
-        self.frame = CGRectMake(0, KScreenH, KScreenW, 0);
-        self.backgroundColor = [UIColor clearColor];
-        [[UIApplication sharedApplication].keyWindow addSubview:self];
-        
         //在keyWindow上底部添加交互view
         UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(15, 0, KScreenW - 30, 180)];
-        contentView.backgroundColor = [UIColor whiteColor];
+        contentView.backgroundColor = UIColor.whiteColor;
+        CGFloat height = CGRectGetMaxY(contentView.frame);
+        self.frame = CGRectMake(0, KScreenH, KScreenW, height + 54);
+//        self.backgroundColor = UIColor.redColor;
         [self addSubview:contentView];
+        [[UIApplication sharedApplication].keyWindow addSubview:self];
+
         //给view设置圆角
         UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:contentView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(12, 12)];
         CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
         maskLayer.frame = contentView.bounds;
         maskLayer.path = maskPath.CGPath;
         contentView.layer.mask = maskLayer;
+                
         
-        CGFloat height = CGRectGetMaxY(contentView.frame) + 0.5;
-        CGRect frame = self.frame;
-        frame.size.height = height + 54;
-        self.frame = frame;
-        
-        
-        //----------- 布局 -------------
+        //------------- 布局 -------------
         //在contentView上添加两个按钮
         UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
         //        btn1.backgroundColor = [UIColor orangeColor];

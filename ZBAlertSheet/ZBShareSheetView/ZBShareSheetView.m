@@ -32,10 +32,12 @@ typedef void(^SheetBlock)(int clickType);
     [sheet show];
 }
 
+// UI布局
 - (void)setupView{
     self.sheetView = [[UIView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, kSheetViewHeight)];
     self.sheetView.backgroundColor = UIColor.clearColor;
     [self addSubview:self.sheetView];
+    
     
     UIButton *cancleBtn = [[UIButton alloc] init];
     cancleBtn.frame = CGRectMake(10, kSheetViewHeight-80, kScreenWidth - 20, 60);
@@ -49,7 +51,7 @@ typedef void(^SheetBlock)(int clickType);
     
     
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(10, CGRectGetMinY(cancleBtn.frame) - 120 - 10, kScreenWidth - 20, 120)];
-    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.backgroundColor = UIColor.whiteColor;
     
     
     
@@ -66,7 +68,6 @@ typedef void(^SheetBlock)(int clickType);
     imgView2.image = [UIImage imageNamed:@"share_pyq"];
     imgView2.tag = 2;
 //    imgView2.backgroundColor = [UIColor greenColor];
-    
     
     
     UILabel *lab1 = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(imgView1.frame), CGRectGetMaxY(imgView1.frame), CGRectGetWidth(imgView1.frame), 40)];
