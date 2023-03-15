@@ -106,9 +106,9 @@ typedef void(^SheetBlock)(int clickType);
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:self];
     
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    self.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [UIView animateWithDuration:SHOWTIME animations:^{
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
         self.sheetView.frame = CGRectMake(0, kScreenHeight - kSheetViewHeight, kScreenWidth, kSheetViewHeight);
     }];
 }
@@ -116,7 +116,7 @@ typedef void(^SheetBlock)(int clickType);
 #pragma mark - dissmiss
 - (void)dissmiss{
     [UIView animateWithDuration:DISSMISSTIME animations:^{
-        self.alpha = 0;
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         self.sheetView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, kSheetViewHeight);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
